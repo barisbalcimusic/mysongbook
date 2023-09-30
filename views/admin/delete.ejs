@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+    <title>Löschen</title>
+    <link rel="stylesheet" type="text/css" media="all" href="/css/styles.css"/>
+</head> 
+
+<body>
+    <img src="/images/background.jpg" id="background-image">
+
+    <div id="menubar-dis">
+        <%- include("../partials/menubar.ejs") %>
+    </div>
+
+    <div class="maindiv">
+        <div id="songlist" class="formstyle">
+
+            <h2>Löschen</h2> 
+            
+            <p>Möchten Sie das Lied wirklich löschen?</p>
+
+            <form method="post">
+                <input type="hidden" name="idsong">
+                <input type="submit" value="löschen" name="loschen">
+                <input type="submit" value="abbrechen" name="abbrechen">
+            </form>
+
+        </div>
+    </div>
+
+    <div id="footer">
+        <%- include("../partials/footer.ejs") %>
+    </div>
+</body>
+</html>

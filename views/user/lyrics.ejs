@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <title>Liedtexte</title>
+    <link rel="stylesheet" type="text/css" media="all" href="/css/styles.css"/>
+</head> 
+
+<body>
+    <img src="/images/background.jpg" id="background-image">
+
+    <div id="menubar-dis">
+        <%- include("../partials/menubar") %>
+    </div>
+    
+    <div class="maindiv">
+        <div class="formstyle">
+
+            <h1>Sänger*innen</h1><br>  
+
+            Bitte wählen Sie eine*n Sänger*in aus.<br><br>
+                <% singer.forEach(singer => { %>
+                    <a href="/lyrics/<%= singer.idsinger %>"><%= singer.singername %></a><br>
+                <% }) %><br>
+                <a class="button" href="/">zurück</a><br><br>  
+        </div>  
+    </div>
+    
+    <div id="footer">
+        <%- include("../partials/footer") %>
+    </div>
+</body>
+</html>

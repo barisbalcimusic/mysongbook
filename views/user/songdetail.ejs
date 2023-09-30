@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+    <title>Liedtext</title>
+    <link rel="stylesheet" type="text/css" media="all" href="/css/styles.css"/>
+</head> 
+
+<body>
+    <img src="/images/background.jpg" id="background-image">
+
+    <div id="menubar-dis">
+        <%- include("../partials/menubar") %>
+    </div>
+    
+    <div class="maindiv">
+        <div class="formstyle">
+            <h1><%= song.songname %></h1><br>  
+
+            <p><%= song.lyrics %></a></p><br> 
+
+            <a class="button" href="/lyrics/<%= song.idsinger %>">zurück</a><br><br>  
+        </div>
+    </div>
+    
+    <div id="footer">
+        <%- include("../partials/footer") %>
+    </div>
+</body>
+</html>

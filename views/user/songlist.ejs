@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <title>Lieder</title>
+    <link rel="stylesheet" type="text/css" media="all" href="/css/styles.css"/>
+</head> 
+
+<body>
+    <img src="/images/background.jpg" id="background-image">
+
+    <div id="menubar-dis">
+        <%- include("../partials/menubar") %>
+    </div>
+    
+    <div class="maindiv">
+        <div class="formstyle">
+
+            <h1>Lieder von <%= singername[0].singername %></h1><br>   
+
+            Bitte wählen Sie ein Lied aus.<br><br>         
+
+            <% for (i = 0; i < song.length; i++) { %>
+                <a href="/lyrics/<%= song[i].idsinger %>/<%= song[i].idsong %>"><%= song[i].songname %></a><br>    
+            <% } %><br>     
+            <a class="button" href="/lyrics">zurück</a><br><br>  
+        </div>
+    </div>
+    
+    <div id="footer">
+        <%- include("../partials/footer") %>
+    </div>
+</body>
+</html>

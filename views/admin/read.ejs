@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <title>Ansicht</title>
+    <link rel="stylesheet" type="text/css" media="all" href="/css/styles.css"/>
+</head> 
+
+<body>
+    <img src="/images/background.jpg" id="background-image">
+
+    <div id="menubar-dis">
+        <%- include("../partials/menubar.ejs") %>
+    </div>
+
+    <div class="maindiv">
+        <div id="songlist" class="formstyle">
+
+            <h2>Ansicht</h2> 
+            
+            <h3>Singer</h3>
+            <%= read.singername %>
+            <h3>Songname</h3>
+            <%= read.songname %>
+            <h3>Lyrics</h3>
+            <%= read.lyrics %>   
+            <br><br>	
+            <form><button formaction="/adminarea">zurück</button></form>
+
+        </div>
+    </div>
+
+    <div id="footer">
+        <%- include("../partials/footer.ejs") %>
+    </div>
+</body>
+</html>

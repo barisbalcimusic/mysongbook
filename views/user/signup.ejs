@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+    <title>Registrieren</title>
+    <link rel="stylesheet" type="text/css" media="all" href="/css/styles.css"/>
+</head> 
+
+<body>
+    <img src="/images/background.jpg" id="background-image">
+
+    <div id="menubar-dis">
+        <%- include("../partials/menubar") %>
+    </div>
+
+    <div class="maindiv">    
+        <div id="uyekayitformu" class="formstyle">
+            <h1>Registrieren</h1><br>
+            <form name="üyelikformu" action="php/uyelikkaydi.php" method="get">
+                Vorname:<br>
+                <input type="text"><br>
+                Nachname:<br>
+                <input type="text"><br>
+                E-Mail:*<br>
+                <input type="email" required><br>
+                Benutzername:*<br>
+                <input type="text" required><br>
+                Kennwort:*<br>
+                <input type="password" required><br>
+                Kennwort (x2):*<br>
+                <input type="password" required>
+                <p style="color:white; font-style: italic">
+                    Ich habe die AGB gelesen und bin damit einverstanden.*
+                    <input type="checkbox" id="checkbox" required>
+                </p>
+                <input type="submit" value="Registrieren">
+                <input type="reset" value="Reset">
+            </form>
+        </div>
+    </div>
+    
+    <div id="footer">
+        <%- include("../partials/footer") %>
+    </div>
+</body>
+</html>

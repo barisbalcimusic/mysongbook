@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <title>Lieder hinzufügen</title>
+    <link rel="stylesheet" type="text/css" media="all" href="/css/styles.css"/>
+</head> 
+
+<body>
+    <img src="/images/background.jpg" id="background-image">
+
+    <div id="menubar-dis">
+        <%- include("../partials/menubar") %>
+    </div>
+
+    <div class="maindiv">  
+        <div id="operations" class="formstyle">
+            <h2>Lieder hinzufügen</h2>  
+            <form id="sarkiekle" method="post">
+                <label for="singername">Sänger*in</label>
+                <select name="singername">
+                <% for (i = 0; i < option.length; i++) { %>    
+                        <option value="<%= option[i].idsinger%>"><%= option[i].singername%></option>
+                <% } %>        
+                </select> 
+                <label for="songname">Titel</label>
+                <input type="text" name="songname">
+                <label for="lyrics">Liedtext</label>
+                <input type="text" name="lyrics">
+                <button type="submit">Speichern</button>
+            </form><br>
+        </div>
+    </div>
+
+    <div id="footer">
+        <%- include("../partials/footer") %>
+    </div>
+</body>
+</html>

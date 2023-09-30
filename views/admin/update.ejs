@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <title>Ändern</title>
+    <link rel="stylesheet" type="text/css" media="all" href="/css/styles.css"/>
+</head> 
+
+<body>
+    <img src="/images/background.jpg" id="background-image">
+
+    <div id="menubar-dis">
+        <%- include("../partials/menubar.ejs") %>
+    </div>
+
+    <div class="maindiv">
+        <div id="songlist" class="formstyle">
+
+        <h2>Ändern</h2>
+
+        <form method="post">
+            <h3>Singer</h3>
+            <input type="hidden" value="<%= data.idsinger %>" name="idsinger"><%= singername.singername %>
+            <h3>Songname</h3>
+            <input type="text" value="<%= data.songname %>" name="songname">
+            <h3>Lyrics</h3>
+            <input type="text" value="<%= data.lyrics %>" name="lyrics">  
+            <br><br>	
+            <input type="submit" value="speichern" name="speichern">
+            <input type="submit" value="abbrechen" name="abbrechen"><br><br>
+        </form>
+        
+        </div>
+    </div>
+
+    <div id="footer">
+        <%- include("../partials/footer.ejs") %>
+    </div>
+</body>
+</html>

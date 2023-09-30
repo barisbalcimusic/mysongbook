@@ -1,0 +1,226 @@
+/* COMMON */
+
+body, html {
+    margin: 0;
+    font-family: calibri;
+}
+
+small {
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+a {
+    color: white;
+    text-decoration-line: none;
+    font-size: 23px;
+}
+
+h1 {
+    color: black;
+    font-size: 40px;
+    text-align: center;
+    margin: 0;
+}
+
+#background-image {
+    position: fixed;
+    top: 0;
+    z-index: -9999;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+}
+
+form {
+    font-size: 20px;
+}
+
+button {
+    padding: 10px;
+    font-size: 15px;
+}
+
+input {
+    font-size: 15px;
+    text-align: center;
+    padding: 10px;
+}
+
+input[type='submit'], input[type='reset'] {
+    font-size: 15px;
+    text-align: center;
+}
+
+input:focus {
+    background-color: rgb(225, 220, 255);
+    outline: none;
+}
+
+select {
+    font-family: verdana;
+    border: solid 2px;
+    padding: 10px;
+}
+
+input[type='submit']:hover, input[type='reset']:hover {
+    cursor: pointer;
+}
+
+.maindiv {
+    width: max-content;
+    box-sizing: border-box;
+    margin: auto;
+    margin-top: 60px;    
+    margin-bottom: 85px;
+}
+
+.formstyle {
+    width: max-content;
+    border: solid thin;
+    border-color: black;
+    border-radius: 3px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.2);
+    margin: auto;
+}
+
+h2 {
+    color: rgb(247, 247, 247);
+    background-color: brown;
+}
+
+th, td {
+    border-bottom: 1px solid;
+    text-align: left;    
+}
+
+.result {
+    background-color: rgb(247, 246, 246);
+    border-radius: 5px;
+}
+
+.button {
+    border: solid thin;
+    border-color: snow;
+    text-align: center;
+    padding: 5px;
+}
+
+.button:hover {
+    background-color: rgb(208, 128, 128);
+}
+
+.action {
+    border: solid thin;
+    color: white;
+    background-color: green;
+    width: fit-content;
+    padding: 5px;
+    margin: auto;
+}
+
+/* MENUBAR */
+
+#menubar-dis {
+    top: 0;
+    width: 100%;
+    height: max-content;
+    display: inline-block;
+    text-align: center;
+    background-color: black;
+    position: fixed;
+}
+
+#menubar-ic {
+    display: inline-block;
+}
+
+.menubox {
+    width: max-content;
+    float: left;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.menubox:hover {
+    cursor: pointer;
+    background-color: rgb(208, 128, 128);
+}
+
+/* SUCHE */
+
+.table table, th, td {
+    border-bottom: 1px solid;
+    border-color: lightgray;
+    padding: 10px;
+    text-align: center;
+}
+
+.table {
+    border-collapse: collapse;
+}
+
+.table tr:hover {
+    background-color: lightgray;
+}
+
+.table th {
+    background-color: skyblue;
+}
+
+#aramasonucu {
+    display: none;
+}
+
+/* AKKORDE */
+
+#akorformu {
+    width: max-content;
+    background: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* SIGNUP */
+
+#checkbox:checked i {
+    background-color: red;
+}
+
+/* FOOTER */
+
+#footer {
+    font-size: 15px;
+    background-color: black;
+    border-top: solid thin #ddd;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    color: white;
+    border-top: solid 2px;
+    border-color: gray;
+    padding: 15px;
+}
+
+#footer a {
+    color: white;
+}
+
+#footer a:hover {
+    color: rgb(208, 128, 128);
+}

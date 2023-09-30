@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+    <title>Adminbereich</title>
+    <link rel="stylesheet" type="text/css" media="all" href="/css/styles.css"/>
+</head> 
+
+<body>
+    <img src="/images/background.jpg" id="background-image">
+
+    <div id="menubar-dis">
+        <%- include("../partials/menubar") %>
+    </div>
+
+    <div class="maindiv">
+        <div id="operations" class="formstyle">
+            <% if(action !== undefined && action == "delete") { %>
+                <div class="action">Das Lied wurde gelöscht.</div>
+            <% } else if (action !== undefined && action == "update") { %>
+                <div class="action">Das Lied wurde aktualisiert.</div>
+            <% } else if (action !== undefined && action == "add") { %>
+                <div class="action">Das Lied wurde hinzugefügt.</div>
+            <% } %>
+
+            <h2>Liste</h2>  
+            
+            <table>
+                <tr>
+                    <th>Singer</th>
+                    <th>Songname</th>
+                    <th>Lyrics</th>
+                </tr>
+                
+                <% for (let i = 0; i < list.length; i++) { %>
+                <tr>
+                    <td><%= list[i].singername %></td>
+                    <td><%= list[i].songname %></td>
+                    <td><%= list[i].lyrics %></td>
+                    <td><a href="/adminarea/read/<%= list[i].idsong %>" class="button">Ansicht</a></td>
+                    <td><a href="/adminarea/update/<%= list[i].idsong %>" class="button">Ändern</a></td>
+                    <td><a href="/adminarea/delete/<%= list[i].idsong %>" class="button">Löschen</a></td>
+                <% }  %> 
+                </tr>
+            </table><br>
+            <td><a href="/adminarea/create" class="button">+ neues Lied Hinzufügen</a></td><br><br>
+        </div>
+    </div>
+
+    <div id="footer">
+        <%- include("../partials/footer") %>
+    </div>
+</body>
+</html>
